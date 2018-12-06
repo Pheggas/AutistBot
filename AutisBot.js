@@ -240,7 +240,7 @@
         status: false,
         name: "AutisBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+        scriptLink: "https://cdn.jsdelivr.net/gh/basicBot/source/basicBot.js",
         cmdLink: "https://goo.gl/Y6sqOc",
         chatLink: "https://rawgit.com/Dark1997/AutisBot/master/AutisBotCzech.json",
         chat: null,
@@ -251,7 +251,7 @@
             botName: "AutisBot",
             language: "czech",
             chatLink: "https://rawgit.com/Dark1997/AutisBot/master/AutisBotCzech.json",
-            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+            scriptLink: "https://cdn.jsdelivr.net/gh/basicBot/source/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 100, // 0-100
@@ -310,8 +310,8 @@
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Dark1997/AutisBot/master/NSFW.json",
-                OP: "https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json"
+                OP: "https://cdn.jsdelivr.net/gh/basicBot/custom/blacklists/OPlist.json",
+                BANNED: "https://cdn.jsdelivr.net/gh/basicBot/custom/blacklists/BANNEDlist.json"
             }
         },
         room: {
@@ -2886,7 +2886,7 @@ sklepCommand: {
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/basicBot/source/master/lang/langIndex.json", function (json) {
+                        $.get("https://cdn.jsdelivr.net/gh/basicBot/source/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
